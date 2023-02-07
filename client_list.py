@@ -4,7 +4,7 @@ class ClientInfo():
 
     def __init__(self, client_address):
         self.client_address = client_address
-        self.client_nickname = "user" + re.search(r"\, (.*?)\)", str(client_address)).group(1)
+        self.client_nickname = "user" + re.search(r"\, (.*?)\)", str(client_address)).group(1) #Chat GPT Regex to extract the id assigned by UDP port
 
     def change_nickname(self, new_name):
         self.client_nickname = new_name
